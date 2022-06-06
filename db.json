@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": "h9BmkNO",
+      "name": "naina",
+      "role": "candidate",
+      "votes": 200,
+      "party": "partyA",
+      "age": 18
+    },
+    {
+      "id": "aPhrKl5",
+      "name": "guddu",
+      "role": "candidate",
+      "votes": 200,
+      "party": "partyA",
+      "age": 18
+    },
+    {
+      "id": "F0xcr6h",
+      "name": "Abhishek",
+      "role": "voter",
+      "username": "Abhi",
+      "password": "1234",
+      "age": 24
+    },
+    {
+      "id": "DnXnAYy",
+      "name": "ram",
+      "role": "voter",
+      "username": "ram",
+      "password": "1234",
+      "age": 24
+    },
+    {
+      "id": "atsYu5Q",
+      "name": "somu",
+      "role": "voter",
+      "username": "sumu",
+      "password": "1234",
+      "age": 24
+    },
+    {
+      "id": "sV9vg9P",
+      "name": "kisu",
+      "role": "voter",
+      "username": "kisu",
+      "password": "1234",
+      "age": 24
+    },
+    {
+      "id": "JLV9LU9",
+      "name": "anu",
+      "role": "voter",
+      "username": "anu",
+      "password": "1234",
+      "age": 24
+    }
+  ]
+}
