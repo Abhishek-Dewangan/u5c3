@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Welcome to My voting system');
+  res.send("Welcome to Abhishek's Voting System");
 });
 
 // create the user data---->
@@ -27,11 +27,11 @@ app.post('/user/create', (req, res) => {
         ];
       }
       writeFile('./db.json', JSON.stringify(parsed), 'utf-8', () => {
-        res.status(201).send('User created sucessfully');
+        res.status(201).send('User is Created Sucessfully!');
       });
     });
   } else {
-    res.status(402).send('Please provide all the mendetory details');
+    res.status(402).send('Please give all the necessary details');
   }
 });
 
@@ -55,7 +55,7 @@ app.post('/user/login', (req, res) => {
       });
     });
   } else {
-    res.status(400).send('please provide username and password');
+    res.status(400).send('please give Username and Password');
   }
 });
 
@@ -75,11 +75,11 @@ app.post('/user/logout', (req, res) => {
         }
       });
       writeFile('./db.json', JSON.stringify(parsed), 'utf-8', () => {
-        res.status(201).send(`Login sucessfully ${req.body.token}`);
+        res.status(201).send(`Login sucessfully! ${req.body.token}`);
       });
     });
   } else {
-    res.status(400).send('please provide username and password');
+    res.status(400).send('please give Username and Password');
   }
 });
 
@@ -92,7 +92,7 @@ app.get('/votes/party/:party', (req, res) => {
 
     let list = JSON.stringify(parsed);
     console.log(list);
-    res.status(200).send('candidate list is get' + list);
+    res.status(200).send('candidate list get' + list);
   });
 });
 
@@ -104,7 +104,7 @@ app.get('/votes/voters', (req, res) => {
 
     let list = JSON.stringify(parsed);
     console.log(list);
-    res.status(200).send('candidate list is get' + list);
+    res.status(200).send('candidate list get' + list);
   });
 });
 
@@ -118,7 +118,7 @@ app.patch('/votes/vote/:user', (req, res) => {
       elem.name == user ? { ...elem, vote: vote++ } : elem,
     );
     writeFile('./db.json', JSON.stringify(parsed), 'utf-8', () => {
-      return res.status(201).send(`Vote added sucessfully`);
+      return res.status(201).send(`Voted Sucessfully!`);
     });
   });
   res.status(401).send(`Vote not counted`);
